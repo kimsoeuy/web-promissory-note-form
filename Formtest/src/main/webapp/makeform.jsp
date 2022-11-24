@@ -15,7 +15,10 @@
 <style>
 input {
 	width: 150px;
-	border:none;
+	border-top:none;
+	border-right:none;
+	border-left:none;
+	border-bottom:0.5px solid gray;
 	text-align: center;}
 .form-control1{
 	width: 80px;}
@@ -158,13 +161,96 @@ $(document).ready(function(){
 			
 			</div>
 			
-			
-			
-			
-			
-			<div class="form-group row">
-				<div class="col-sm-offset-2 col-sm-10">
-					<input type="submit" value="등록" class="btn btn-primary">
+			<style>
+				.side_menuwrap{
+					width: 80px;
+					height:210px;
+					margin-top:250px;
+					position:fixed;
+					right:0;
+					top:0;
+					box-sizing: border-box;
+					z-index: 10001;
+					
+					}
+				.side_menu{
+					width: 100%;
+					height:100%;
+					
+					}
+				.sbtn1{
+					border-bottom:1px solid white;
+					
+					}
+				.sbtn1:nth-last-child(1){
+					border:0;
+					}
+				.stn1_1{
+				    width: 80px;
+    				height: 70px;
+					font-size:16px;
+					text-align:center;
+					background:rgba(0,0,0,0.7);
+					color:white;
+					cursor: pointer;
+					}
+				.stn1_2{
+					text-decoration:none;
+					display:block;
+				    width: 80px;
+    				height: 70px;
+					font-size:16px;
+					text-align:center;
+					box-sizing: border-box;
+					padding-top: 24px;
+					background:rgba(0,0,0,0.7);
+					color:white;
+					cursor: pointer;
+					
+					}
+				.stn1_3{
+					text-decoration:none;
+				    display:block;
+				    width: 80px;
+    				height: 70px;
+					font-size:16px;
+					text-align:center;
+					box-sizing: border-box;
+					padding-top: 24px;
+					background:rgba(0,0,0,0.7);
+					color:white;
+					cursor: pointer;
+					}
+					.stn1_1:hover{
+				 	color:black;
+				 	background:rgba(255,0,0,0.6);
+				 	
+				 	}
+					.stn1_2:hover{
+				 	color:black;
+				 	background:rgba(255,0,0,0.6);
+				 	
+				 	}
+				 .stn1_3:hover{
+				 	color:black;
+				 	background:rgba(255,0,0,0.6);
+				 	
+				 	}
+					
+			</style>
+			<!-- 메뉴 바 -->
+			<div class="side_menuwrap">
+				<div class="side_menu">
+					<div class="sbtn1">
+						<input type="submit" value="저장" class="stn1_1">
+					</div>
+					<div class="sbtn1">
+						<a href="index.jsp" class="stn1_2">홈으로</a>
+					</div>
+					<div class="sbtn1">
+						<a href="forms.jsp" class="stn1_3">내문서</a><!-- 문서모음 -->
+					</div>
+					
 				</div>
 			</div>
 		</form>
