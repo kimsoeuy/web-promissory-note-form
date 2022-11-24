@@ -16,7 +16,8 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	.header{ width:1980px;
 			 height:80px;
 			 background-color: white;
-			 border-bottom: 1px solid rgba(221,221,221,0.3);}
+			 border-bottom: 1px solid rgba(221,221,221,0.3);
+			 }
 	.header_wrap{width: 1024px;
 				 margin-left:auto;
 				 margin-right:auto;
@@ -26,13 +27,39 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	.header_wrap .nav {float:right;
 					   line-height: 64px;
 					   }
-	.nav {}
+	.nav { }
 	.nav ul{}
 	.nav ul li{ display:inline-block}
 	.nav ul li a{z-index:100}
 	
 	
-	<!--content-->
+	
+	<!--메뉴바 .on-->
+		.dispalynone{
+			width:30px;}
+		.on_{	
+			position:absolute;	
+			top:-70px;
+			right: 0;
+			z-index:200;
+			display:none;
+			
+		}
+		.on_>li{
+		list-style: none;
+		border:1px solid #e2e2e2;
+		width:90px;
+		height:40px;
+		text-align:center;
+		background-color:white;
+		line-height: 38px;
+		
+		}
+		.on_>li>a{
+		margin:0;
+		padding:0;
+		}
+		<!--content-->
 	.m_container{ width:1980px;
 					height:360px;
 	}
@@ -47,7 +74,7 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	    font-weight: 700;
 	    white-space: nowrap;
 	    text-overflow: ellipsis;
-	    position: relative;
+	    position:relative;
 	    z-index: 1;
 	    margin-top: 70px;
 	    margin-bottom: 20px;}
@@ -73,27 +100,6 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	    height: 437px;
 	    z-index:50}
 		
-	<!--메뉴바 .on-->
-		.dispalynone{}
-		.on_{	
-		position:absolute;	
-		right: 430px;
-		display: none;
-		z-index:200;
-		}
-		.on_>li{
-		list-style: none;
-		border:1px solid #e2e2e2;
-		display:block;
-		width:90px;
-		text-align:center;
-		background-color:white;
-		padding:5px;
-		}
-		.on_>li>a{
-		margin:0;
-		padding:0;
-		}
 		
 </style>
 <script type="text/javascript">
@@ -119,22 +125,21 @@ var bDisplay = true; function doDisplay(){
 					<li><a class="navbar-brand" href="./index.jsp">Home</a></li>
 					<li><a class="navbar-brand" href="#"><%=id %>(<%=name %>)님 안녕하세요</a></li> <!-- 로그인 성공시 index.jsp로이동 -->
 					<li><a class="navbar-brand" href="./makeform.jsp">차용증만들기</a></li>
-					<li><a class="navbar-brand" href="javascript:doDisplay();"><img src="./img/headerPannel.png"/></a></div></li>
+					<li><a class="navbar-brand" href="javascript:doDisplay();"><img src="./img/headerPannel.png"/></a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
-	
-	<div class="dispalynone" >
-			<ul class="on_" id="on_">
-				<li><a class="navbar-brand" href="./logout.jsp">로그아웃</a></li> 
-				<li><a class="navbar-brand" href="./getInfo.jsp">정보수정</a></li>
-				<li><a class="navbar-brand" href="./delete_ok.jsp">회원탈퇴</a></li>
-			</ul>
-	</div>
 <!-- content -->
 	<div class="m_container">
 		<div class="content1">
+			<div class="dispalynone" >
+						<ul class="on_" id="on_">
+							<li><a class="navbar-brand" href="./logout.jsp">로그아웃</a></li> 
+							<li><a class="navbar-brand" href="./getInfo.jsp?id=<%=id %>">정보수정</a></li>
+							<li><a class="navbar-brand" href="./delete_ok.jsp">회원탈퇴</a></li>
+						</ul>
+					</div>
 			<div class="title">차용증 간편 양식</div>
 			<div class="sub">
 				<div>돈을 빌려주실 때도 ,빌릴 때도</div>
